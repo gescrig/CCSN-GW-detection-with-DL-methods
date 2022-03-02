@@ -1,0 +1,33 @@
+Equation of State Effects on Gravitational Waves from Rotating Core Collapse
+Richers, Sherwood; Ott, Christian David; Abdikamalov, Ernazar; O'Connor, Evan; Sullivan, Chris
+
+Gravitational waveforms from 1824 fiducial and detailed electron capture simulations, sampled at 65535 Hz. The file is in HDF5 format, using the flags {dtype="f4",compression="gzip",shuffle=True,fletcher32=True}. Each group is contained in the "waveforms" top-level group and is named with the "A" and "omega_0" values from Equation 5 and the EOS. In each sub-group is a dataset containing timestamps in seconds (t=0 is core bounce) and a dataset containing the strain multiplied by the distance in centimeters. The values of A in kilometers, omega_0 in radians/s, and the EOS are stored as attributes of each group.
+
+In addition, the Ye(rho) profiles are stored in the "yeofrho" top-level group. Each sub-group is labeled by the EOS used to generate the profile.
+
+Finally, select reduced data is stored in the "reduced_data" top-level group. The following quantities are each stored as a 1824-element array, where elements of the same index from different datasets correspond to the same 2D simulation.
+
+A(km) -- differential rotation parameter in Equation 5
+D*bounce_amplitude_1(cm) -- The minimum of the first (negative) GW strain peak, multiplied by distance.
+D*bounce_amplitude_2(cm) -- The maximum of the second (positive) GW strain peak, multiplied by distance.
+EOS -- the equation of state used in the simulation
+MbarICgrav(Msun) -- gravitational mass of the inner core, averaged over time after core bounce
+Mgrav1_IC_b(Msun) -- gravitational mass of the inner core at bounce
+Mrest_IC_b(Msun) -- rest mass of the inner core at bounce
+SNR(aLIGOfrom10kpc) -- signal to noise ratio of the GW signal, assuming a distance of 10kpc and aLIGO sensitivity
+T_c_b(MeV) -- central temperature at bounce
+Ye_c_b -- central electron fraction at bounce
+alpha_c_b -- central lapse at bounce
+beta1_IC_b -- ratio of rotational kinetic to gravitational potential energy of the inner core at bounce
+fpeak(Hz) -- frequency of the post-bounce GW oscillations
+j_IC_b() -- angular momentum of the inner core at bounce
+omega_0(rad|s) -- initial (pre-collapse) rotation rate used in Equation 5
+omega_max(rad|s) -- maximum rotation rate achieved outside of 5km
+rPNSequator_b(km) -- radius of the rho=10^11 g/ccm contour along the equator at bounce
+rPNSpole_b(km) -- radius of the rho=10^11 g/ccm contour along the pole at bounce
+r_omega_max(km) -- radius where omega_max occurs
+rho_c_b(g|ccm) -- central density at bounce (not time averaged)
+rhobar_c_postbounce(g|ccm) -- central density time averaged after bounce
+s_c_b(kB|baryon) -- central entropy at bounce
+t_postbounce_end(s) -- time of the end of the postbounce signal (t=0 is core bounce)
+tbounce(s) -- time of core bounce (t=0 is the beginning of the simulation)
